@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-color: #c9deff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yanovych.controllers.GameRoomViewController">
+    <stylesheets>
+        <URL value="@css/GameRoomStyles.css" />
+    </stylesheets>
+   <MenuButton layoutX="5.0" layoutY="7.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="200.0" text="Create new record">
+     <items>
+       <MenuItem mnemonicParsing="false" onAction="#onNewChildClicked" text="New child" />
+         <MenuItem mnemonicParsing="false" onAction="#onNewToyClicked" text="New toy" />
+         <MenuItem mnemonicParsing="false" onAction="#onNewRoomClicked" text="New room" />
+     </items>
+      <font>
+         <Font size="18.0" />
+      </font>
+   </MenuButton>
+    <TableView fx:id="roomTable" layoutX="5.0" layoutY="102.0" onMouseClicked="#onRoomTableCellClicked" prefHeight="468.0" prefWidth="900" visible="false">
+        <columns>
+            <TableColumn fx:id="roomId" prefWidth="40" style="-fx-alignment: center;" text="Id" />
+            <TableColumn fx:id="roomName" prefWidth="150" style="-fx-alignment: center;" text="Name" />
+            <TableColumn fx:id="roomMinimumAge" prefWidth="75.0" style="-fx-alignment: center;" text="Min age" />
+            <TableColumn fx:id="roomMaximumAge" prefWidth="75.0" style="-fx-alignment: center;" text="Max age" />
+            <TableColumn fx:id="roomBudget" prefWidth="75.0" style="-fx-alignment: center;" text="Budget" />
+            <TableColumn fx:id="roomCapacity" prefWidth="120.0" style="-fx-alignment: center;" text="Toys capacity" />
+            <TableColumn fx:id="roomAction" prefWidth="100.0" style="-fx-alignment: center;" text="Action" />
+        </columns>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
+    </TableView>
+    <TableView fx:id="childTable" layoutX="5.0" layoutY="102.0" onMouseClicked="#onChildTableCellClicked" prefHeight="468.0" prefWidth="900" visible="false">
+        <columns>
+            <TableColumn fx:id="childId" prefWidth="65.60000514984131" style="-fx-alignment: center;" text="Id" />
+            <TableColumn fx:id="childName" prefWidth="141.19998168945312" style="-fx-alignment: center;" text="Name" />
+            <TableColumn fx:id="childAge" prefWidth="80.40000915527344" style="-fx-alignment: center;" text="Age" />
+            <TableColumn fx:id="childRoom" prefWidth="114.4000244140625" style="-fx-alignment: center;" text="Room" />
+            <TableColumn fx:id="childSex" prefWidth="90.39996337890625" style="-fx-alignment: center;" text="Sex" />
+            <TableColumn fx:id="childAction" prefWidth="117.39996337890625" style="-fx-alignment: center;" text="Action" />
+        </columns>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
+    </TableView>
+    <TableView fx:id="toyTable" layoutX="5.0" layoutY="102.0" onMouseClicked="#onToyTableCellClicked" prefHeight="468.0" prefWidth="900" visible="false">
+        <columns>
+            <TableColumn fx:id="toyId" prefWidth="40" style="-fx-alignment: center;" text="Id" />
+            <TableColumn fx:id="toyName" prefWidth="100" style="-fx-alignment: center;" text="Name" />
+            <TableColumn fx:id="toyMinimumAge" prefWidth="60" style="-fx-alignment: center;" text="Min age" />
+            <TableColumn fx:id="toyPrice" prefWidth="60" style="-fx-alignment: center;" text="Price" />
+            <TableColumn fx:id="toyType" prefWidth="70" style="-fx-alignment: center;" text="Type" />
+            <TableColumn fx:id="toySize" prefWidth="70" style="-fx-alignment: center;" text="Size" />
+            <TableColumn fx:id="toyColor" prefWidth="70" style="-fx-alignment: center;" text="Color" />
+            <TableColumn fx:id="toyMaterial" prefWidth="70" style="-fx-alignment: center;" text="Material" />
+            <TableColumn fx:id="toyRoom" prefWidth="70" style="-fx-alignment: center;" text="Room" />
+            <TableColumn fx:id="toyAction" prefWidth="70" style="-fx-alignment: center;" text="Action" />
+        </columns>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
+    </TableView>
+    <Button fx:id="childrenBtn" focusTraversable="false" layoutX="5.0" layoutY="64.0" mnemonicParsing="false" onAction="#onShowChildrenClick" prefHeight="40.0" prefWidth="300" style="-fx-alignment: center;" text="Show children" />
+    <Button fx:id="toysBtn" focusTraversable="false" layoutX="305.0" layoutY="64.0" mnemonicParsing="false" onAction="#onShowToysClick" prefHeight="40.0" prefWidth="300" style="-fx-alignment: center;" text="Show toys" />
+    <Button fx:id="roomsBtn" focusTraversable="false" layoutX="605.0" layoutY="64.0" mnemonicParsing="false" onAction="#onShowRoomsClick" prefHeight="40.0" prefWidth="300" style="-fx-alignment: center;" text="Show rooms" />
+    <Button fx:id="addChildToRoomBtn" layoutX="704.0" layoutY="7.0" mnemonicParsing="false" onAction="#onAddChildClick" prefHeight="48.0" prefWidth="200.0" style="-fx-alignment: center;" text="Add child to room" />
+    <Button fx:id="addToyToRoomBtn" layoutX="704.0" layoutY="7.0" mnemonicParsing="false" onAction="#onAddToyClick" prefHeight="48.0" prefWidth="200.0" style="-fx-alignment: center;" text="Add toy to room" />
+   <ComboBox fx:id="availableRoomsBox" layoutX="433.0" layoutY="7.0" onAction="#onAvailableRoomsBoxClick" prefHeight="48.0" prefWidth="266.0" promptText="Choose room" style="-fx-alignment: center;" />
+   <Label fx:id="childrenInRoomCountLabel" layoutX="490.0" layoutY="7.0" prefHeight="48.0" prefWidth="200.0" style="-fx-alignment: center;" styleClass="label-counter" textFill="white" visible="false">
+       <font>
+           <Font size="18.0" />
+       </font>
+   </Label>
+   <Label fx:id="toysInRoomCountLabel" layoutX="705.0" layoutY="7.0" prefHeight="48.0" prefWidth="200.0" style="-fx-alignment: center;" styleClass="label-counter" textFill="white" visible="false">
+       <font>
+           <Font size="18.0" />
+       </font>
+    </Label>
+   <Button fx:id="searchToysBtn" layoutX="224.0" layoutY="7.0" mnemonicParsing="false" onAction="#onSearchToysClick" prefHeight="48.0" prefWidth="200.0" text="Search toys" />
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

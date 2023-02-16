@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox style="-fx-background-color: #c9deff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yanovych.controllers.AddChildViewController">
+   <stylesheets>
+      <URL value="@css/GameRoomStyles.css" />
+   </stylesheets>
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Child details" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding></HBox>
+      <Separator prefWidth="200.0" />
+      <HBox alignment="CENTER">
+         <children>
+            <Label text="Name:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="childNameInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Enter name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin></HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Label text="Age:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" right="15.0" top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="childAgeInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Enter age">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin></HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Label text="Sex:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" right="15.0" top="20.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="childSexBox" focusTraversable="false" prefHeight="34.0" prefWidth="218.0" promptText=" Choose sex" />
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin></HBox>
+      <Separator prefWidth="200.0" />
+      <HBox alignment="CENTER">
+         <children>
+            <Button fx:id="saveChildBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onSaveChildClicked" text="Save child">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="clearBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onClearClicked" text="Clear">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+         </children></HBox>
+   </children>
+</VBox>
