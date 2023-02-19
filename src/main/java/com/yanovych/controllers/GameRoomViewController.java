@@ -1,6 +1,6 @@
 package com.yanovych.controllers;
 
-import com.yanovych.Main;
+import com.yanovych.MainApp;
 import com.yanovych.entities.Child;
 import com.yanovych.entities.Room;
 import com.yanovych.entities.Toy;
@@ -179,7 +179,7 @@ public class GameRoomViewController implements Initializable {
                     });
                     editIcon.setOnMouseClicked((MouseEvent event) -> {
                         child = getTableView().getItems().get(getIndex());
-                        URL url = Main.class.getResource("AddChildView.fxml");
+                        URL url = MainApp.class.getResource("AddChildView.fxml");
                         FXMLLoader loader = new FXMLLoader(url);
                         try {
                             loader.load();
@@ -242,7 +242,7 @@ public class GameRoomViewController implements Initializable {
                     });
                     editIcon.setOnMouseClicked((MouseEvent event) -> {
                         room = getTableView().getItems().get(getIndex());
-                        URL url = Main.class.getResource("AddRoomView.fxml");
+                        URL url = MainApp.class.getResource("AddRoomView.fxml");
                         FXMLLoader loader = new FXMLLoader(url);
                         try {
                             loader.load();
@@ -329,7 +329,7 @@ public class GameRoomViewController implements Initializable {
                     });
                     editIcon.setOnMouseClicked((MouseEvent event) -> {
                         toy = getTableView().getItems().get(getIndex());
-                        URL url = Main.class.getResource("AddToyView.fxml");
+                        URL url = MainApp.class.getResource("AddToyView.fxml");
                         FXMLLoader loader = new FXMLLoader(url);
                         try {
                             loader.load();
@@ -363,7 +363,7 @@ public class GameRoomViewController implements Initializable {
     }
     @FXML
     public void onNewChildClicked() {
-        URL url = Main.class.getResource("AddChildView.fxml");
+        URL url = MainApp.class.getResource("AddChildView.fxml");
         FXMLLoader loader = new FXMLLoader(url);
         try {
             loader.load();
@@ -384,7 +384,7 @@ public class GameRoomViewController implements Initializable {
     }
     @FXML
     public void onNewToyClicked() {
-        URL url = Main.class.getResource("AddToyView.fxml");
+        URL url = MainApp.class.getResource("AddToyView.fxml");
         FXMLLoader loader = new FXMLLoader(url);
         try {
             loader.load();
@@ -406,7 +406,7 @@ public class GameRoomViewController implements Initializable {
     }
     @FXML
     public void onNewRoomClicked() {
-        URL url = Main.class.getResource("AddRoomView.fxml");
+        URL url = MainApp.class.getResource("AddRoomView.fxml");
         FXMLLoader loader = new FXMLLoader(url);
         try {
             loader.load();
@@ -427,7 +427,7 @@ public class GameRoomViewController implements Initializable {
     }
     @FXML
     public void onSearchToysClick() {
-        URL url = Main.class.getResource("SearchToysInRoomView.fxml");
+        URL url = MainApp.class.getResource("SearchToysInRoomView.fxml");
         FXMLLoader loader = new FXMLLoader(url);
         try {
             loader.load();

@@ -181,7 +181,7 @@ public class RoomServiceImplementation implements RoomService {
     @Override
     public List<Room> getAvailableRoomsForToy(Toy toy) {
         List<Room> availableRoomByAge = this.getAllRooms().stream()
-                .filter(room -> room.getMinimumChildAge() <= toy.getMinimumAge())
+                .filter(room -> room.getMinimumChildAge() >= toy.getMinimumAge())
                 .toList();
         List<Room> availableRoomsByBudget = availableRoomByAge.stream()
                 .filter(room -> room.getBudget() >= toy.getPrice())

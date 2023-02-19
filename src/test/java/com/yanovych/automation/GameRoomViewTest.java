@@ -1,6 +1,6 @@
 package com.yanovych.automation;
 
-import com.yanovych.Main;
+import com.yanovych.MainApp;
 import com.yanovych.entities.Child;
 import com.yanovych.entities.Room;
 import com.yanovych.entities.Toy;
@@ -30,7 +30,7 @@ import static org.testfx.matcher.base.NodeMatchers.isVisible;
 public class GameRoomViewTest extends ApplicationTest {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("GameRoomView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("GameRoomView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
         stage.setScene(scene);
