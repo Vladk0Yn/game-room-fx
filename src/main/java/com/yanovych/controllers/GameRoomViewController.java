@@ -94,6 +94,10 @@ public class GameRoomViewController implements Initializable {
     private final RoomService roomService = RoomServiceImplementation.getInstance();
     private final ToyService toyService = ToyServiceImplementation.getInstance();
     public Button searchToysBtn;
+    public MenuItem newChildBtn;
+    public MenuItem newToyBtn;
+    public MenuItem newRoomBtn;
+    public MenuButton menuBtn;
     private Child child = null;
     private Room room = null;
     private Toy toy = null;
@@ -160,10 +164,12 @@ public class GameRoomViewController implements Initializable {
                     setGraphic(null);
                     setText(null);
                 } else {
-                    Button deleteIcon = new Button("Delete");
+                    Button deleteIcon = new Button("Видалити");
+                    deleteIcon.setId("deleteChildBtn");
                     deleteIcon.getStyleClass().setAll("btn","btn-danger","btn-sm");
                     deleteIcon.setPrefWidth(10);
-                    Button editIcon = new Button("Edit");
+                    Button editIcon = new Button("Змінити");
+                    editIcon.setId("editChildBtn");
                     editIcon.getStyleClass().setAll("btn","btn-success","btn-sm");
                     editIcon.setPrefWidth(10);
                     deleteIcon.setOnMouseClicked((MouseEvent event) -> {
@@ -221,11 +227,13 @@ public class GameRoomViewController implements Initializable {
                     setGraphic(null);
                     setText(null);
                 } else {
-                    Button deleteIcon = new Button("Delete");
+                    Button deleteIcon = new Button("Видалити");
+                    deleteIcon.setId("deleteRoomBtn");
                     deleteIcon.getStyleClass().setAll("btn","btn-danger","btn-sm");
                     deleteIcon.setPrefWidth(10);
-                    Button editIcon = new Button("Edit");
+                    Button editIcon = new Button("Змінити");
                     editIcon.getStyleClass().setAll("btn","btn-success","btn-sm");
+                    editIcon.setId("editRoomBtn");
                     editIcon.setPrefWidth(10);
                     deleteIcon.setOnMouseClicked((MouseEvent event) -> {
                         room = getTableView().getItems().get(getIndex());
@@ -306,10 +314,12 @@ public class GameRoomViewController implements Initializable {
                     setGraphic(null);
                     setText(null);
                 } else {
-                    Button deleteIcon = new Button("Delete");
+                    Button deleteIcon = new Button("Видалити");
+                    deleteIcon.setId("deleteToyBtn");
                     deleteIcon.getStyleClass().setAll("btn","btn-danger","btn-sm");
                     deleteIcon.setPrefWidth(10);
-                    Button editIcon = new Button("Edit");
+                    Button editIcon = new Button("Змінити");
+                    editIcon.setId("editToyBtn");
                     editIcon.getStyleClass().setAll("btn","btn-success","btn-sm");
                     editIcon.setPrefWidth(10);
                     deleteIcon.setOnMouseClicked((MouseEvent event) -> {
@@ -391,6 +401,7 @@ public class GameRoomViewController implements Initializable {
         stage.setScene(scene);
         stage.initStyle(StageStyle.UTILITY);
         stage.showAndWait();
+        this.toys = toyService.getAllToys();
         loadDateToyTable();
     }
     @FXML
@@ -480,8 +491,8 @@ public class GameRoomViewController implements Initializable {
             childrenInRoomCountLabel.setVisible(true);
             toysInRoomCountLabel.setVisible(true);
             searchToysBtn.setVisible(true);
-            childrenInRoomCountLabel.setText(room.getChildrenInRoom().size() + " children in room");
-            toysInRoomCountLabel.setText(room.getToysInRoom().size() + " toys in room");
+            childrenInRoomCountLabel.setText(room.getChildrenInRoom().size() + " дітей в кімнаті");
+            toysInRoomCountLabel.setText(room.getToysInRoom().size() + " іграшок в кімнаті");
         }
     }
     @FXML void onAvailableRoomsBoxClick() {

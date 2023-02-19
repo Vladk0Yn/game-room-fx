@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox style="-fx-background-color: #c9deff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yanovych.controllers.AddRoomViewController">
+<VBox fx:id="addRoomView" style="-fx-background-color: #c9deff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yanovych.controllers.AddRoomViewController">
     <stylesheets>
         <URL value="@css/GameRoomStyles.css" />
     </stylesheets>
     <children>
         <HBox alignment="CENTER">
             <children>
-                <Label alignment="CENTER" contentDisplay="CENTER" text="Room details" textAlignment="CENTER">
+                <Label alignment="CENTER" contentDisplay="CENTER" text="Данні про кімнату" textAlignment="CENTER">
                     <font>
                         <Font size="24.0" />
                     </font>
@@ -28,18 +28,18 @@
       <Separator prefWidth="200.0" />
         <HBox alignment="CENTER">
             <children>
-                <Label text="Name:">
+                <Label text="Назва:">
                     <font>
                         <Font size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets right="55.0" />
+                        <Insets right="100.0" />
                     </HBox.margin>
                     <padding>
                         <Insets bottom="20.0" top="20.0" />
                     </padding>
                 </Label>
-                <TextField fx:id="roomNameInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Enter name">
+                <TextField fx:id="roomNameInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Введіть назву">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -50,7 +50,73 @@
             </VBox.margin></HBox>
         <HBox alignment="CENTER">
             <children>
-                <Label text="Toy capacity:">
+                <Label text="Кількість іграшок:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="roomCapacityInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Введіть кількість">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+            </children>
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></HBox>
+        <HBox alignment="CENTER">
+            <children>
+                <Label text="Бюджет:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="90.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="roomBudgetInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Введіть бюджет">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+            </children>
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></HBox>
+        <HBox alignment="CENTER">
+            <children>
+                <Label text="Мінімальний вік:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="20.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="roomMinAgeInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Введіть мінімальний вік">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+            </children>
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></HBox>
+        <HBox alignment="CENTER">
+            <children>
+                <Label text="Максимальний вік:">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -61,73 +127,7 @@
                         <Insets bottom="20.0" top="20.0" />
                     </padding>
                 </Label>
-                <TextField fx:id="roomCapacityInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Enter capacity">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </TextField>
-            </children>
-            <VBox.margin>
-                <Insets left="10.0" right="10.0" />
-            </VBox.margin></HBox>
-        <HBox alignment="CENTER">
-            <children>
-                <Label text="Budget:">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                    <HBox.margin>
-                        <Insets right="30.0" />
-                    </HBox.margin>
-                    <padding>
-                        <Insets bottom="20.0" right="15.0" top="20.0" />
-                    </padding>
-                </Label>
-                <TextField fx:id="roomBudgetInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Enter budget">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </TextField>
-            </children>
-            <VBox.margin>
-                <Insets left="10.0" right="10.0" />
-            </VBox.margin></HBox>
-        <HBox alignment="CENTER">
-            <children>
-                <Label text="Min age:">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                    <HBox.margin>
-                        <Insets right="35.0" />
-                    </HBox.margin>
-                    <padding>
-                        <Insets bottom="20.0" top="20.0" />
-                    </padding>
-                </Label>
-                <TextField fx:id="roomMinAgeInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Enter minimum child age">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </TextField>
-            </children>
-            <VBox.margin>
-                <Insets left="10.0" right="10.0" />
-            </VBox.margin></HBox>
-        <HBox alignment="CENTER">
-            <children>
-                <Label text="Max age:">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                    <HBox.margin>
-                        <Insets right="35.0" />
-                    </HBox.margin>
-                    <padding>
-                        <Insets bottom="20.0" top="20.0" />
-                    </padding>
-                </Label>
-                <TextField fx:id="roomMaxAgeInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Enter maximum child age">
+                <TextField fx:id="roomMaxAgeInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Введіть максимальний вік">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -139,7 +139,7 @@
       <Separator prefWidth="200.0" />
         <HBox alignment="CENTER">
             <children>
-                <Button fx:id="saveRoomBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onSaveRoomClicked" text="Save room">
+                <Button fx:id="saveRoomBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onSaveRoomClicked" text="Зберегти кімнату">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -147,7 +147,7 @@
                         <Insets bottom="20.0" right="20.0" top="20.0" />
                     </HBox.margin>
                 </Button>
-                <Button fx:id="clearBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onClearClicked" text="Clear">
+                <Button fx:id="clearBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onClearClicked" text="Очистити">
                     <font>
                         <Font size="18.0" />
                     </font>

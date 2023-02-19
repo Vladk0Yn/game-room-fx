@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox style="-fx-background-color: #c9deff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yanovych.controllers.AddChildViewController">
+<VBox fx:id="addChildView" style="-fx-background-color: #c9deff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yanovych.controllers.AddChildViewController">
    <stylesheets>
       <URL value="@css/GameRoomStyles.css" />
    </stylesheets>
    <children>
       <HBox alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Child details" textAlignment="CENTER">
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Данні про дитину" textAlignment="CENTER">
                <font>
                   <Font size="24.0" />
                </font>
@@ -28,18 +28,18 @@
       <Separator prefWidth="200.0" />
       <HBox alignment="CENTER">
          <children>
-            <Label text="Name:">
+            <Label text="Ім'я:">
                <font>
                   <Font size="18.0" />
                </font>
                <HBox.margin>
-                  <Insets right="20.0" />
+                  <Insets right="30.0" />
                </HBox.margin>
                <padding>
                   <Insets bottom="20.0" top="20.0" />
                </padding>
             </Label>
-            <TextField fx:id="childNameInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Enter name">
+            <TextField fx:id="childNameInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Введіть ім'я">
                <font>
                   <Font size="18.0" />
                </font>
@@ -50,7 +50,7 @@
          </VBox.margin></HBox>
       <HBox alignment="CENTER">
          <children>
-            <Label text="Age:">
+            <Label text="Вік:">
                <font>
                   <Font size="18.0" />
                </font>
@@ -61,7 +61,7 @@
                   <Insets bottom="20.0" right="15.0" top="20.0" />
                </padding>
             </Label>
-            <TextField fx:id="childAgeInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Enter age">
+            <TextField fx:id="childAgeInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Введіть вік">
                <font>
                   <Font size="18.0" />
                </font>
@@ -72,18 +72,18 @@
          </VBox.margin></HBox>
       <HBox alignment="CENTER">
          <children>
-            <Label text="Sex:">
+            <Label text="Стать:">
                <font>
                   <Font size="18.0" />
                </font>
                <HBox.margin>
-                  <Insets right="20.0" />
+                  <Insets right="10.0" />
                </HBox.margin>
                <padding>
-                  <Insets bottom="20.0" right="15.0" top="20.0" />
+                  <Insets bottom="20.0" top="20.0" />
                </padding>
             </Label>
-            <ComboBox fx:id="childSexBox" focusTraversable="false" prefHeight="34.0" prefWidth="218.0" promptText=" Choose sex" />
+            <ComboBox fx:id="childSexBox" focusTraversable="false" prefHeight="34.0" prefWidth="218.0" promptText=" Оберіть стать" />
          </children>
          <VBox.margin>
             <Insets left="10.0" right="10.0" />
@@ -91,7 +91,7 @@
       <Separator prefWidth="200.0" />
       <HBox alignment="CENTER">
          <children>
-            <Button fx:id="saveChildBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onSaveChildClicked" text="Save child">
+            <Button fx:id="saveChildBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onSaveChildClicked" text="Зберегти дитину">
                <font>
                   <Font size="18.0" />
                </font>
@@ -99,7 +99,7 @@
                   <Insets bottom="20.0" right="20.0" top="20.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="clearBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onClearClicked" text="Clear">
+            <Button fx:id="clearBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onClearClicked" text="Очистити">
                <font>
                   <Font size="18.0" />
                </font>

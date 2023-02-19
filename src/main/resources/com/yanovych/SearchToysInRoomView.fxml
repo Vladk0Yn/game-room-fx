@@ -13,7 +13,7 @@
     <children>
         <HBox alignment="CENTER">
             <children>
-                <Label alignment="CENTER" contentDisplay="CENTER" text="Search toys" textAlignment="CENTER">
+                <Label alignment="CENTER" contentDisplay="CENTER" text="Пошук іграшок" textAlignment="CENTER">
                     <font>
                         <Font size="24.0" />
                     </font>
@@ -28,30 +28,30 @@
         <Separator prefWidth="200.0" />
         <HBox alignment="CENTER">
             <children>
-                <Label text="Rooms:">
+                <Label text="Кімната:">
                     <font>
                         <Font size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets right="70.0" />
+                        <Insets right="110.0" />
                     </HBox.margin>
                     <padding>
-                        <Insets bottom="20.0" right="10.0" top="20.0" />
+                        <Insets bottom="20.0" top="20.0" />
                     </padding>
                 </Label>
-                <ComboBox fx:id="roomBox" focusTraversable="false" prefHeight="34.0" prefWidth="218.0" promptText=" Choose room" />
+                <ComboBox fx:id="roomBox" focusTraversable="false" prefHeight="34.0" prefWidth="218.0" promptText="Оберіть кімнату" />
             </children>
             <VBox.margin>
                 <Insets left="10.0" right="10.0" />
             </VBox.margin></HBox>
         <HBox alignment="CENTER">
             <children>
-                <Label text="Minimum price:">
+                <Label text="Мінімальна ціна:">
                     <font>
                         <Font size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets right="20.0" />
+                        <Insets right="40.0" />
                     </HBox.margin>
                     <padding>
                         <Insets bottom="20.0" top="20.0" />
@@ -68,7 +68,7 @@
             </VBox.margin></HBox>
         <HBox alignment="CENTER">
             <children>
-                <Label text="Maximum price:">
+                <Label text="Максимальна ціна:">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -91,7 +91,7 @@
         <Separator prefWidth="200.0" />
         <HBox alignment="CENTER">
             <children>
-                <Button fx:id="searchToysBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onSearchToysClicked" text="Search toys">
+                <Button fx:id="searchToysBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onSearchToysClicked" text="Знайти іграшки">
                     <font>
                         <Font size="18.0" />
                     </font>

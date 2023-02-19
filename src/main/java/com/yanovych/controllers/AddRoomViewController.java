@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -22,6 +23,7 @@ public class AddRoomViewController implements Initializable {
     public TextField roomMaxAgeInput;
     public Button saveRoomBtn;
     public Button clearBtn;
+    public VBox addRoomView;
     private boolean update;
     private Room room = new Room();
 

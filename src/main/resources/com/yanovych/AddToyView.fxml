@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox style="-fx-background-color: #c9deff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yanovych.controllers.AddToyViewController">
+<VBox fx:id="addToyView" style="-fx-background-color: #c9deff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yanovych.controllers.AddToyViewController">
     <stylesheets>
         <URL value="@css/GameRoomStyles.css" />
     </stylesheets>
     <children>
     <HBox alignment="CENTER">
         <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Toy details" textAlignment="CENTER">
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Данні про іграшку" textAlignment="CENTER">
                 <font>
                     <Font size="24.0" />
                 </font>
@@ -28,18 +28,18 @@
     <Separator prefWidth="200.0" />
     <HBox alignment="CENTER">
         <children>
-            <Label text="Name:">
+            <Label text="Назва:">
                 <font>
                     <Font size="18.0" />
                 </font>
                 <HBox.margin>
-                    <Insets right="55.0" />
+                    <Insets right="100.0" />
                 </HBox.margin>
                 <padding>
                     <Insets bottom="20.0" top="20.0" />
                 </padding>
             </Label>
-            <TextField fx:id="toyNameInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Enter name">
+            <TextField fx:id="toyNameInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Введіть назву">
                 <font>
                     <Font size="18.0" />
                 </font>
@@ -50,18 +50,18 @@
         </VBox.margin></HBox>
         <HBox alignment="CENTER">
             <children>
-                <Label text="Min age:">
+                <Label text="Мінімальний вік:">
                     <font>
                         <Font size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets right="35.0" />
+                        <Insets right="15.0" />
                     </HBox.margin>
                     <padding>
                         <Insets bottom="20.0" top="20.0" />
                     </padding>
                 </Label>
-                <TextField fx:id="toyMinAgeInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Enter minimum child age">
+                <TextField fx:id="toyMinAgeInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Введіть мінімальний вік">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -72,18 +72,18 @@
             </VBox.margin></HBox>
     <HBox alignment="CENTER">
         <children>
-            <Label text="Price:">
+            <Label text="Ціна:  ">
                 <font>
                     <Font size="18.0" />
                 </font>
                 <HBox.margin>
-                    <Insets right="30.0" />
+                    <Insets right="100.0" />
                 </HBox.margin>
                 <padding>
-                    <Insets bottom="20.0" right="30.0" top="20.0" />
+                    <Insets bottom="20.0" top="20.0" />
                 </padding>
             </Label>
-            <TextField fx:id="toyPriceInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Enter price">
+            <TextField fx:id="toyPriceInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Введіть ціну">
                 <font>
                     <Font size="18.0" />
                 </font>
@@ -94,72 +94,72 @@
         </VBox.margin></HBox>
         <HBox alignment="CENTER">
             <children>
-                <Label text="Type:">
+                <Label text="Тип:">
                     <font>
                         <Font size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets right="20.0" />
+                        <Insets right="110.0" />
                     </HBox.margin>
                     <padding>
-                        <Insets bottom="20.0" right="40.0" top="20.0" />
+                        <Insets bottom="20.0" top="20.0" />
                     </padding>
                 </Label>
-                <ComboBox fx:id="toyTypeBox" focusTraversable="false" prefHeight="34.0" prefWidth="218.0" promptText=" Choose type" />
+                <ComboBox fx:id="toyTypeBox" focusTraversable="false" prefHeight="34.0" prefWidth="218.0" promptText="Оберіть тип" />
             </children>
             <VBox.margin>
                 <Insets left="10.0" right="10.0" />
             </VBox.margin></HBox>
         <HBox alignment="CENTER">
             <children>
-                <Label text="Size:">
+                <Label text="Розмір:">
                     <font>
                         <Font size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets right="20.0" />
+                        <Insets right="80.0" />
                     </HBox.margin>
                     <padding>
-                        <Insets bottom="20.0" right="45.0" top="20.0" />
+                        <Insets bottom="20.0" top="20.0" />
                     </padding>
                 </Label>
-                <ComboBox fx:id="toySizeBox" focusTraversable="false" prefHeight="34.0" prefWidth="218.0" promptText=" Choose size" />
+                <ComboBox fx:id="toySizeBox" focusTraversable="false" prefHeight="34.0" prefWidth="218.0" promptText="Оберіть розмір" />
             </children>
             <VBox.margin>
                 <Insets left="10.0" right="10.0" />
             </VBox.margin></HBox>
         <HBox alignment="CENTER">
             <children>
-                <Label text="Color:">
+                <Label text="Колір:">
                     <font>
                         <Font size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets right="20.0" />
+                        <Insets right="90.0" />
                     </HBox.margin>
                     <padding>
-                        <Insets bottom="20.0" right="35.0" top="20.0" />
+                        <Insets bottom="20.0" top="20.0" />
                     </padding>
                 </Label>
-                <ComboBox fx:id="toyColorBox" focusTraversable="false" prefHeight="34.0" prefWidth="218.0" promptText=" Choose color" />
+                <ComboBox fx:id="toyColorBox" focusTraversable="false" prefHeight="34.0" prefWidth="218.0" promptText="Оберіть колір" />
             </children>
             <VBox.margin>
                 <Insets left="10.0" right="10.0" />
             </VBox.margin></HBox>
         <HBox alignment="CENTER">
             <children>
-                <Label text="Material:">
+                <Label text="Матеріал:">
                     <font>
                         <Font size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets right="20.0" />
+                        <Insets right="60.0" />
                     </HBox.margin>
                     <padding>
-                        <Insets bottom="20.0" right="10.0" top="20.0" />
+                        <Insets bottom="20.0" top="20.0" />
                     </padding>
                 </Label>
-                <ComboBox fx:id="toyMaterialBox" focusTraversable="false" prefHeight="34.0" prefWidth="218.0" promptText=" Choose material" />
+                <ComboBox fx:id="toyMaterialBox" focusTraversable="false" prefHeight="34.0" prefWidth="218.0" promptText="Оберіть матеріал" />
             </children>
             <VBox.margin>
                 <Insets left="10.0" right="10.0" />
@@ -167,7 +167,7 @@
     <Separator prefWidth="200.0" />
     <HBox alignment="CENTER">
         <children>
-            <Button fx:id="saveToyBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onSaveToyClicked" text="Save toy">
+            <Button fx:id="saveToyBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onSaveToyClicked" text="Зберегти іграшку">
                 <font>
                     <Font size="18.0" />
                 </font>
@@ -175,7 +175,7 @@
                     <Insets bottom="20.0" right="20.0" top="20.0" />
                 </HBox.margin>
             </Button>
-            <Button fx:id="clearBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onClearClicked" text="Clear">
+            <Button fx:id="clearBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onClearClicked" text="Очистити">
                 <font>
                     <Font size="18.0" />
                 </font>

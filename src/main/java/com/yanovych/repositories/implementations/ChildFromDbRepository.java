@@ -18,6 +18,7 @@ public class ChildFromDbRepository implements ChildRepository {
     private final static String SELECT_ALL_CHILDREN_SQL = "SELECT * FROM child;";
     private final static String UPDATE_CHILD_SQL = "UPDATE child SET child_name = ?, child_age = ?, child_sex = ? WHERE child_id = ?;";
     private final static String DELETE_CHILD_SQL = "DELETE FROM child WHERE child_id = ?;";
+
     private static ChildFromDbRepository instance = null;
     private final ConnectionManager connectionManager;
 

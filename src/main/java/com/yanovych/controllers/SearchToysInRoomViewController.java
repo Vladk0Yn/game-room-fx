@@ -67,8 +67,16 @@ public class SearchToysInRoomViewController implements Initializable {
     @FXML
     public void onSearchToysClicked() {
         this.room = roomBox.getValue();
-        this.minPrice = Double.valueOf(toyMinimumPriceInput.getText());
-        this.maxPrice = Double.valueOf(toyMaximumPriceInput.getText());
+        if (!toyMinimumPriceInput.getText().isEmpty()) {
+            this.minPrice = Double.valueOf(toyMinimumPriceInput.getText());
+        } else {
+            this.minPrice = 0d;
+        }
+        if (!toyMaximumPriceInput.getText().isEmpty()) {
+            this.maxPrice = Double.valueOf(toyMaximumPriceInput.getText());
+        } else {
+            this.maxPrice = Double.MAX_VALUE;
+        }
         closeView();
     }
 

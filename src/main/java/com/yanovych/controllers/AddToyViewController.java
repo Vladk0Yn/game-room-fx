@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -29,6 +30,7 @@ public class AddToyViewController implements Initializable {
     public ComboBox<ToyMaterial> toyMaterialBox;
     public Button saveToyBtn;
     public Button clearBtn;
+    public VBox addToyView;
     private Toy toy = new Toy();
     private boolean update;
 
@@ -110,7 +112,7 @@ public class AddToyViewController implements Initializable {
     public void fillInputsForUpdate(Toy toy) {
         this.toy = toy;
         this.toyNameInput.setText(toy.getName());
-        this.toyPriceInput.setText(toy.getName());
+        this.toyPriceInput.setText(toy.getPrice().toString());
         this.toyMinAgeInput.setText(toy.getMinimumAge().toString());
         this.toyTypeBox.setValue(toy.getType());
         this.toySizeBox.setValue(toy.getSize());

@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -24,6 +25,7 @@ public class AddChildViewController implements Initializable {
     public Button saveChildBtn;
     public Button clearBtn;
     public ComboBox<Sex> childSexBox;
+    public VBox addChildView;
     private boolean updatable = false;
     private Child child = new Child();
 

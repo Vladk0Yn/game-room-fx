@@ -6,8 +6,8 @@ module com.yanovych {
     requires java.sql;
     requires com.google.gson;
     requires org.kordamp.bootstrapfx.core;
-
     exports com.yanovych;
+    opens com.yanovych to javafx.graphics;
     opens com.yanovych.controllers;
     opens com.yanovych.entities;
     opens com.yanovych.entities.enums;
